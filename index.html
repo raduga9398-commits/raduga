@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>RADUGA — О компании</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --blue: #1e5fd8;
+      --blue-light: #eaf1ff;
+      --text-dark: #1f2937;
+      --text-gray: #6b7280;
+      --border: #e5e7eb;
+      --bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    /* ===== CONTAINER ===== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: linear-gradient(135deg, var(--blue), #0f3ea8);
+      color: white;
+      padding: 60px 20px;
+    }
+
+    header .container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    header h1 {
+      font-size: 36px;
+    }
+
+    header p {
+      max-width: 700px;
+      opacity: 0.95;
+    }
+
+    /* ===== SECTION ===== */
+    .section {
+      margin-top: 60px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 24px;
+      color: var(--blue);
+    }
+
+    /* ===== CARDS GRID ===== */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    /* ===== CARD ===== */
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-image {
+      height: 220px;
+      background: var(--blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .card-meta {
+      color: var(--text-gray);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .card-desc {
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      background: var(--blue);
+      color: white;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #154bb8;
+    }
+
+    .btn-outline {
+      background: white;
+      color: var(--blue);
+      border: 1px solid var(--blue);
+    }
+
+    .btn-outline:hover {
+      background: var(--blue-light);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      margin-top: 80px;
+      padding: 30px 20px;
+      background: var(--blue-light);
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-gray);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <h1>RADUGA</h1>
+    <p>
+      RADUGA — Məişət malları mağazaları şəbəkəsinə malik olan şirkət.
+      Biz bazarda fəaliyyət göstərərək ev və biznes üçün geniş məhsul çeşidi təklif edir,
+       keyfiyyətə, əlçatanlığa və sabit xidmətə önəm veririk.
+    </p>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ===== EMPLOYEES ===== -->
+  <section class="section">
+    <h2 class="section-title">İşçi heyəti</h2>
+
+    <div class="cards">
+
+
+      <!-- Employee 5 (Turac) -->
+      <article class="card">
+        <div class="card-image">
+          <img src="img/turac.jpeg" alt="">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Turac Zeinalov</h3>
+          <p class="card-meta">Vəzifə: Administrator • 27 лет</p>
+          <p class="card-desc">
+            Çox səbrlidir, bütün işləri yüksək məsuliyyətlə yerinə yetirir. Lari ilə işləməsə də, 
+            xarici valyuta (EUR, USD) ilə əməliyyatlar aparır. Baş sürücünün sponsorudur.
+          </p>
+        </div>
+      </article>
+
+      <!-- Employee 1  Ismail-->
+      <article class="card">
+        <div class="card-image">
+          <!-- если нет фото — оставь пустым или поставь заглушку -->
+          <img src="img/ismail.jpeg" alt="Ismail Gasanov">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Ismail Gasanov</h3>
+          <p class="card-meta">Vəzifə: Nazarata Nazarat • 15 года</p>
+          <p class="card-desc">
+            Güclü telefon oyunları oynayır.
+            Keyfi istədikdə laminat və ya qranit yukleyir.
+            Maşın sürmək üçün hər şeyini verməyə hazırdır.
+          </p>
+          
+        </div>
+      </article>
+
+      <!-- Employee 2 (Ravil) -->
+      <article class="card">
+        <div class="card-image">
+          <img src="img/ravil.jpeg" alt="Ravil Gasanov">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Ravil Gasanov </h3>
+          <p class="card-meta"> Vəzifə: Ofis • 22 лет</p>
+          <p class="card-desc">
+            Proqram və telefon təminatları ilə məşğuldur.
+            Ofisdə çalışır.
+            Müştərilərə dəstək göstərir.
+          </p>
+        </div>
+      </article>
+
+<!-- Employee 3 (Iskandar) -->
+      <article class="card">
+        <div class="card-image">
+          <img src="img/iskandar.jpeg" alt="iskandar zamanov">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Iskandar Zamanov</h3>
+          <p class="card-meta">Vəzifə: Baş sürücü • 32 лет</p>
+          <p class="card-desc">
+            Sifarişlərin çatdırılması ilə məşğuldur.Administratorun ürəyidir.
+            Çox səbirsizdir.
+          Əsəbi olanda yanında durmaq məsləhətli deyil.
+          Tıxacda hamı ilə mübahisə edir.
+          Tualetə girəndə isə çıxmağı bilmir.
+          </p>
+        </div>
+      </article>
+
+      <!-- Employee 4 (Nariman ) -->
+      <article class="card">
+        <div class="card-image">
+          <img src="img/nariman.jpeg" alt="Nariman Gajiev">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Nariman Gajiev</h3>
+          <p class="card-meta">Vəzifə: Anbar meneceri • 17 лет</p>
+          <p class="card-desc">
+            Administratorun Böyrəyidir. 
+            Çox məsuliyyətli işçidir.
+            50 kv.m qranit dolduranda, 10 kv.m qranit itkiyə gedir.
+             İşə saat 10:00-dan tez gəlmir.
+          </p>
+        </div>
+      </article>
+
+      <!-- Employee 6 (Revayet) -->
+      <article class="card">
+        <div class="card-image">
+          <img src="img/revayet.jpeg" alt="Revayet Allahverdiev">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Revayet Allahverdiyev</h3>
+          <p class="card-meta">Vəzifə: Ümumi Satış Meneceri • 35 лет</p>
+          <p class="card-desc">
+            Çox məsuliyyətlidir, müştərilərə maksimum keyfiyyətli xidmət göstərir.
+            Mağazada səliqəyə önəm verir.
+             Hər bir müştərini razı salmağı bacarır. Yaxşı insandır.
+          </p>
+        </div>
+      </article>
+
+      <!-- Employee 7 (Ali) -->
+      <article class="card">
+        <div class="card-image">
+          <img src="img/ali.jpeg" alt="Ali Orucov">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Ali Orucov</h3>
+          <p class="card-meta">Vəzifə: Oboylar üzrə Satış Meneceri • 39 лет</p>
+          <p class="card-desc">
+            Professor
+          </p>
+        </div>
+      </article>
+
+      <!-- Employee 8 (Vadim) -->
+      <article class="card">
+        <div class="card-image">
+          <img src="img/vadim.jpeg" alt="Vadim Yunusov">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Vadim Yunusov</h3>
+          <p class="card-meta">Vəzifə: Baş Anbar Meneceri • 38 лет</p>
+          <p class="card-desc">
+            Çox məsuliyyətli və cəlddir.
+             İşə gəldikdə geyimini yarım saata dəyişir, evə gedərkən isə 3 dəqiqəyə.
+          </p>
+        </div>
+      </article>
+
+      <!-- Employee 9 (Ramil Fatullayev) -->
+      <article class="card">
+        <div class="card-image">
+          <img src="img/ramiz.jpeg" alt="Ramil Fatullayev">
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Ramil Fatullayev</h3>
+          <p class="card-meta">Vəzifə: Ümumi Satış Meneceri • 64 лет</p>
+          <p class="card-desc">
+            15 illik təcrübəli satış meneceridir. Dünyada baş verən hər şeydən xəbəri var.
+             Hansı mövzuda söhbət açsanız, danışar.
+             Danışıqlarının 90%-i yalan, 10%-i isə sual altındadır.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 RADUGA. Все права защищены.
+</footer>
+
+</body>
+</html>
